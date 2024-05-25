@@ -1,0 +1,763 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: grey;
+}
+
+header {
+  background-color: #484283;
+  padding: 20px 370px 100px 370px;
+  position: relative;
+}
+header .small-basket {
+  display: none;
+  position: relative;
+  z-index: 999;
+  bottom: 397px;
+  left: 700px;
+  max-width: 480px;
+  background-color: #fff;
+}
+header .small-basket .all-goods {
+  overflow-y: scroll;
+  height: 323px;
+  background: rgba(204, 217, 242, 0.2);
+}
+header .small-basket .all-goods .empty-message {
+  margin: 140px 0 0 90px;
+  font-size: 50px;
+  font-weight: 500;
+}
+header .small-basket .all-goods::-webkit-scrollbar {
+  width: 7px;
+}
+header .small-basket .all-goods::-webkit-scrollbar-thumb {
+  background-color: rgba(77, 77, 77, 0.2);
+  border-radius: 5px;
+}
+header .small-basket .under-goods {
+  padding: 20px 20px 20px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0px -4px 10px 0px rgba(0, 13, 84, 0.1);
+          box-shadow: 0px -4px 10px 0px rgba(0, 13, 84, 0.1);
+  display: flex;
+}
+header .small-basket .under-goods .total-price {
+  margin: 20px 0 0 20px;
+  margin-right: 129px;
+}
+header .small-basket .under-goods .total-price .total-text {
+  margin-bottom: 10px;
+  color: #4D4D4D;
+  font-weight: 400;
+  font-size: 14px;
+}
+header .small-basket .under-goods .total-price .price-total-busket {
+  font-weight: 700;
+  color: #4D4D4D;
+  font-size: 20px;
+}
+header .small-basket .under-goods .go_to_cart {
+  background-color: #F14F4F;
+  border: none;
+  padding: 22px 47px 22px 47px;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+header .small-basket .goods {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 440px;
+  margin-left: 20px;
+}
+header .small-basket .goods .sibling_busket {
+  margin-left: auto;
+  cursor: pointer;
+}
+header .small-basket .goods:nth-child(even) {
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+header .small-basket .goods .sibling__goods {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+header .small-basket .goods .sibling__goods .desc-shoes-busket {
+  color: #4D4D4D;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+header .small-basket .goods .sibling__goods .price-shoes-busket {
+  color: #4D4D4D;
+  font-weight: 700;
+  line-height: 20px;
+  font-size: 20px;
+  margin-top: 14px;
+}
+header .small-basket .goods .icon-shoes-busket {
+  margin-top: 10px;
+}
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: solid 1px grey;
+  text-align: center;
+}
+header nav .logo {
+  color: #fff;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-right: auto;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+}
+header nav .menu_list {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  padding-right: 40px;
+}
+header nav .menu_list .menu_nav_search:not(:nth-child(6)) {
+  padding-right: 40px;
+}
+header nav li {
+  list-style-type: none;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-right: 10px;
+}
+header nav li a {
+  text-decoration: none;
+  color: #fff;
+}
+header nav .complex_img {
+  margin-top: 12px;
+  position: relative;
+}
+header nav .complex_img .menu_basket {
+  height: 20px;
+  width: 18.42px;
+  cursor: pointer;
+}
+header nav .complex_img .menu_one {
+  height: 16.84px;
+  width: 16px;
+  position: absolute;
+  left: 8px;
+  top: 5px;
+  cursor: pointer;
+}
+header nav .complex_img .number {
+  position: absolute;
+  top: 1px;
+  left: 5px;
+  color: #fff;
+}
+header nav .complex_img .hidden {
+  display: none;
+}
+header section {
+  margin-top: 100px;
+  position: relative;
+  z-index: 999;
+}
+header section .about-dilevary {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 50.4px;
+}
+header section .desc-product {
+  color: #fff;
+  font-size: 16px;
+  line-height: 22.4px;
+  font-weight: 400;
+}
+header section .shopping {
+  padding: 22px 47px 22px 47px;
+  border-radius: 4px;
+  background-color: #F14F4F;
+  border: none;
+  color: #fff;
+  margin-top: 40px;
+  cursor: pointer;
+}
+header .back-text {
+  position: absolute;
+  bottom: 88px;
+  left: 515px;
+  z-index: 1;
+  bottom: 100px;
+  color: rgba(255, 255, 255, 0.1215686275);
+  font-size: 200px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main {
+  padding: 60px 0px 60px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+main .text_catalog {
+  height: 20px;
+  color: #444B58;
+  font-size: 30px;
+  font-weight: 700;
+  list-style: 30px;
+}
+main .products {
+  display: grid;
+  grid-template-columns: repeat(3, 280px);
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 20px;
+  max-width: 880px;
+  margin-left: 20px;
+  margin-top: 60px;
+  gap: 20px;
+  min-height: 500px;
+  /* Задает минимальную высоту контейнера */
+  position: relative;
+}
+main .products .wrapper {
+  width: 100%;
+  position: absolute;
+  top: 30%;
+  display: none;
+}
+main .products .wrapper img {
+  margin-left: 40px;
+  cursor: pointer;
+}
+main .products .add_plus {
+  margin-left: 85%;
+  cursor: pointer;
+}
+main .products .show_more {
+  grid-column: span 3;
+  align-self: end;
+  justify-self: center;
+  margin-top: auto;
+  padding: 22px 47px 22px 47px;
+  border-radius: 4px;
+  background-color: #F14F4F;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+main .products .cards {
+  position: relative;
+  -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.46);
+  box-shadow: 0px 1.5px 4px 1px rgba(0, 0, 0, 0.46);
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+main .products .cards .cards__frame {
+  width: 100%;
+  max-height: 280px;
+}
+main .products .cards:hover {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+}
+main .cross_filters {
+  margin-top: 40px;
+  background-color: #FFF4EE;
+  padding: 20px 20px 20px 20px;
+}
+main .cross_filters .selection_param {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+}
+main .price-filter {
+  margin-top: 20px;
+}
+main .price-filter .price {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  margin-bottom: 10px;
+}
+main .price-filter .display_interval {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 50px;
+  border-radius: 4px;
+  border: 1px solid #B2B5BB;
+}
+main .price-filter .display_interval .from-number {
+  -ms-flex-item-align: center;
+      align-self: center;
+  color: #444B58;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+}
+main .price-filter .display_interval .divider {
+  height: 34px;
+  border: solid 1px #B2B5BB;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+main .price-filter .display_interval .before-number {
+  -ms-flex-item-align: center;
+      align-self: center;
+  color: #444B58;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+}
+main .price-filter input[type=range] {
+  -webkit-appearance: none;
+  height: 2px;
+  background-color: #444B58;
+  border-radius: 2px;
+}
+main .price-filter input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #444B58;
+  width: 3px;
+  height: 20px;
+  border-radius: 4px;
+}
+main .price-filter .gender_filter {
+  margin-top: 20px;
+}
+main .price-filter .gender_filter .floor {
+  margin-bottom: 10px;
+}
+main .price-filter .gender_filter .checkbox_filter_floor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+main .price-filter .gender_filter input[type=checkbox]:checked,
+main .price-filter .gender_filter input[type=checkbox]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+main .price-filter .gender_filter input[type=checkbox]:checked + label,
+main .price-filter .gender_filter input[type=checkbox]:not(:checked) + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+  line-height: 20px;
+  cursor: pointer;
+}
+main .price-filter .gender_filter input[type=checkbox]:checked + label:before,
+main .price-filter .gender_filter input[type=checkbox]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #DBBBA9;
+  background-color: #ffffff;
+}
+main .price-filter .gender_filter input[type=checkbox]:checked + label:before,
+main .price-filter .gender_filter input[type=checkbox]:not(:checked) + label:before {
+  border-radius: 2px;
+}
+main .price-filter .gender_filter input[type=checkbox]:checked + label:after,
+main .price-filter .gender_filter input[type=checkbox]:not(:checked) + label:after {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+main .price-filter .gender_filter input[type=checkbox]:checked + label:after,
+main .price-filter .gender_filter input[type=checkbox]:not(:checked) + label:after {
+  left: 3px;
+  top: 4px;
+  width: 10px;
+  height: 5px;
+  border-radius: 1px;
+  border-left: 4px solid #DBBBA9;
+  border-bottom: 4px solid #DBBBA9;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+main .price-filter .gender_filter input[type=checkbox]:not(:checked) + label:after {
+  opacity: 0;
+}
+main .price-filter .gender_filter input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+main .price-filter .size_filter {
+  margin-top: 20px;
+}
+main .price-filter .size_filter .text-size {
+  font-size: 16px;
+  line-height: 16px;
+  color: #444B58;
+  margin-bottom: 10px;
+}
+main .price-filter .size_filter .filters_size_columns {
+  display: grid;
+  grid-template-columns: repeat(3, 90px);
+  border: solid 1px #DBBBA9;
+  height: 171px;
+}
+main .price-filter .size_filter .filters_size_columns .square_size {
+  background-color: #FFF4EE;
+  border: solid 1px #DBBBA9;
+  cursor: pointer;
+}
+main .price-filter .size_filter .filters_size_columns .active {
+  background-color: #101328;
+  color: white;
+  opacity: 0.8;
+  border: none;
+}
+main .price-filter .complex_bth {
+  margin-top: 20px;
+  max-width: 270px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+main .price-filter .complex_bth .apply {
+  background-color: #444B58;
+  padding: 10px 95px 10px 95px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+main .price-filter .complex_bth .reset {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #444B58;
+  display: block;
+  cursor: pointer;
+}
+
+.about {
+  background-color: #484283;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+.about .figure {
+  position: absolute;
+}
+.about article {
+  max-width: 374px;
+  margin: 222px 0 0 374px;
+  color: #fff;
+  margin-right: 53px;
+}
+.about article h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+}
+.about article p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22.4px;
+}
+.about article .cite {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: right;
+}
+.about article .cite .logo {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-right: 20px;
+}
+
+.quiz {
+  background-color: #FFF4EE;
+  padding: 40px 100px 40px 100px;
+  max-width: 1180px;
+  margin: 0 auto;
+  margin-top: 60px;
+  color: #444B58;
+  border-radius: 4px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+.quiz .choice-shoes {
+  display: grid;
+  grid-template-columns: repeat(3, 280px);
+  grid-gap: 70px;
+}
+.quiz .choice-shoes .this_shoes {
+  font-size: 16px;
+  font-weight: 400;
+}
+.quiz .choice-shoes .this_shoes input[type=checkbox]:checked,
+.quiz .choice-shoes .this_shoes input[type=checkbox]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+.quiz .choice-shoes .this_shoes input[type=checkbox]:checked + label,
+.quiz .choice-shoes .this_shoes input[type=checkbox]:not(:checked) + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+  line-height: 20px;
+  cursor: pointer;
+}
+.quiz .choice-shoes .this_shoes input[type=checkbox]:checked + label:before,
+.quiz .choice-shoes .this_shoes input[type=checkbox]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #DBBBA9;
+  background-color: #ffffff;
+}
+.quiz .choice-shoes .this_shoes input[type=checkbox]:checked + label:before,
+.quiz .choice-shoes .this_shoes input[type=checkbox]:not(:checked) + label:before {
+  border-radius: 2px;
+}
+.quiz .choice-shoes .this_shoes input[type=checkbox]:checked + label:after,
+.quiz .choice-shoes .this_shoes input[type=checkbox]:not(:checked) + label:after {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.quiz .choice-shoes .this_shoes input[type=checkbox]:checked + label:after,
+.quiz .choice-shoes .this_shoes input[type=checkbox]:not(:checked) + label:after {
+  left: 3px;
+  top: 4px;
+  width: 10px;
+  height: 5px;
+  border-radius: 1px;
+  border-left: 4px solid #DBBBA9;
+  border-bottom: 4px solid #DBBBA9;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.quiz .choice-shoes .this_shoes input[type=checkbox]:not(:checked) + label:after {
+  opacity: 0;
+}
+.quiz .choice-shoes .this_shoes input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+.quiz .staps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.quiz .number_staps {
+  font-size: 16px;
+  font-weight: 400;
+  color: #808080;
+  margin-top: 33px;
+}
+.quiz .bth-stroke {
+  padding: 17px 42px 17px 42px;
+  border-radius: 4px;
+  margin-top: 20px;
+  border: solid 1px #444B58;
+  background-color: #FFF4EE;
+}
+.quiz .complex-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 70px;
+}
+.quiz .complex-checkbox input[type=checkbox]:checked,
+.quiz .complex-checkbox input[type=checkbox]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+.quiz .complex-checkbox input[type=checkbox]:checked + label,
+.quiz .complex-checkbox input[type=checkbox]:not(:checked) + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+  line-height: 20px;
+  cursor: pointer;
+}
+.quiz .complex-checkbox input[type=checkbox]:checked + label:before,
+.quiz .complex-checkbox input[type=checkbox]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #DBBBA9;
+  background-color: #ffffff;
+}
+.quiz .complex-checkbox input[type=checkbox]:checked + label:before,
+.quiz .complex-checkbox input[type=checkbox]:not(:checked) + label:before {
+  border-radius: 2px;
+}
+.quiz .complex-checkbox input[type=checkbox]:checked + label:after,
+.quiz .complex-checkbox input[type=checkbox]:not(:checked) + label:after {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.quiz .complex-checkbox input[type=checkbox]:checked + label:after,
+.quiz .complex-checkbox input[type=checkbox]:not(:checked) + label:after {
+  left: 3px;
+  top: 4px;
+  width: 10px;
+  height: 5px;
+  border-radius: 1px;
+  border-left: 4px solid #DBBBA9;
+  border-bottom: 4px solid #DBBBA9;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.quiz .complex-checkbox input[type=checkbox]:not(:checked) + label:after {
+  opacity: 0;
+}
+.quiz .complex-checkbox input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+.quiz .nike__air {
+  margin-top: 22px;
+  border-radius: 4px;
+}
+.quiz textarea {
+  width: 465px;
+  height: 246px;
+  resize: none;
+  border: none;
+}
+.quiz textarea::-webkit-input-placeholder {
+  padding: 20px 0 0 20px;
+  color: #DBBBA9;
+}
+.quiz textarea::-moz-placeholder {
+  padding: 20px 0 0 20px;
+  color: #DBBBA9;
+}
+.quiz textarea:-ms-input-placeholder {
+  padding: 20px 0 0 20px;
+  color: #DBBBA9;
+}
+.quiz textarea::-ms-input-placeholder {
+  padding: 20px 0 0 20px;
+  color: #DBBBA9;
+}
+.quiz textarea::placeholder {
+  padding: 20px 0 0 20px;
+  color: #DBBBA9;
+}
+
+.final-filling {
+  padding: 80px 100px 57px 100px;
+  margin: 0 auto;
+  max-width: 1180px;
+  margin-top: 60px;
+  background-color: #FFF4EE;
+  position: relative;
+}
+.final-filling .sibling-desc {
+  color: #fff;
+}
+.final-filling .get-offer {
+  max-width: 655px;
+  padding: 40px 115px 40px 40px;
+  background-color: #DBBBA9;
+  position: relative;
+}
+.final-filling form {
+  max-width: 655px;
+  margin-top: 24px;
+  border-radius: 4px;
+}
+.final-filling form input[type=email] {
+  max-width: 500px;
+  border-radius: 4px;
+}
+.final-filling form input[type=text] {
+  max-width: 500px;
+  border-radius: 4px;
+}
+.final-filling form input[type=submit] {
+  padding: 23px 73px 21px 74px;
+  margin-top: 20px;
+  background-color: #F14F4F;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+}
+.final-filling img {
+  position: absolute;
+  top: 30%;
+  right: 20%;
+}
+
+#desktop {
+  background-color: #fff;
+  margin: 0 auto;
+  height: auto;
+  max-width: 1920px;
+}

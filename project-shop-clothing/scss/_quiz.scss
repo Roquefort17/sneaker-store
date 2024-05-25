@@ -1,0 +1,261 @@
+.quiz {
+    background-color: #FFF4EE;
+    padding: 40px 100px 40px 100px;
+    max-width: 1180px;
+    margin: 0 auto;
+    margin-top: 60px;
+    color: #444B58;
+    border-radius: 4px;
+    margin-left: 150px;
+    margin-right: 150px;
+
+    
+    .choice-shoes {
+        display: grid;
+        grid-template-columns: repeat(3, 280px);
+        grid-gap: 70px;
+
+        .this_shoes {
+            font-size: 16px;
+            font-weight: 400;
+
+            input[type="checkbox"]:checked,
+            input[type="checkbox"]:not(:checked) {
+                position: absolute;
+                left: -9999px;
+            }
+
+            input[type="checkbox"]:checked+label,
+            input[type="checkbox"]:not(:checked)+label {
+                display: inline-block;
+                position: relative;
+                padding-left: 28px;
+                line-height: 20px;
+                cursor: pointer;
+            }
+
+            input[type="checkbox"]:checked+label:before,
+            input[type="checkbox"]:not(:checked)+label:before {
+                content: "";
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 18px;
+                height: 18px;
+                border: 1px solid #DBBBA9;
+                background-color: #ffffff;
+            }
+
+            input[type="checkbox"]:checked+label:before,
+            input[type="checkbox"]:not(:checked)+label:before {
+                border-radius: 2px;
+            }
+
+            input[type="checkbox"]:checked+label:after,
+            input[type="checkbox"]:not(:checked)+label:after {
+                content: "";
+                position: absolute;
+                -webkit-transition: all 0.2s ease;
+                -moz-transition: all 0.2s ease;
+                -o-transition: all 0.2s ease;
+                transition: all 0.2s ease;
+            }
+
+            input[type="checkbox"]:checked+label:after,
+            input[type="checkbox"]:not(:checked)+label:after {
+                left: 3px;
+                top: 4px;
+                width: 10px;
+                height: 5px;
+                border-radius: 1px;
+                border-left: 4px solid #DBBBA9;
+                border-bottom: 4px solid #DBBBA9;
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+
+
+            input[type="checkbox"]:not(:checked)+label:after {
+                opacity: 0;
+            }
+
+            input[type="checkbox"]:checked+label:after {
+                opacity: 1;
+            }
+        }
+
+    }
+
+    .staps {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .number_staps {
+        font-size: 16px;
+        font-weight: 400;
+        color: #808080;
+        margin-top: 33px;
+    }
+
+    .bth-stroke {
+        padding: 17px 42px 17px 42px;
+        border-radius: 4px;
+        margin-top: 20px;
+        border: solid 1px #444B58;
+        background-color: #FFF4EE;
+    }
+
+    .complex-checkbox {
+        display: flex;
+        gap: 70px;
+
+
+
+        input[type="checkbox"]:checked,
+        input[type="checkbox"]:not(:checked) {
+            position: absolute;
+            left: -9999px;
+        }
+
+        input[type="checkbox"]:checked+label,
+        input[type="checkbox"]:not(:checked)+label {
+            display: inline-block;
+            position: relative;
+            padding-left: 28px;
+            line-height: 20px;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"]:checked+label:before,
+        input[type="checkbox"]:not(:checked)+label:before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #DBBBA9;
+            background-color: #ffffff;
+        }
+
+        input[type="checkbox"]:checked+label:before,
+        input[type="checkbox"]:not(:checked)+label:before {
+            border-radius: 2px;
+        }
+
+        input[type="checkbox"]:checked+label:after,
+        input[type="checkbox"]:not(:checked)+label:after {
+            content: "";
+            position: absolute;
+            -webkit-transition: all 0.2s ease;
+            -moz-transition: all 0.2s ease;
+            -o-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+        }
+
+        input[type="checkbox"]:checked+label:after,
+        input[type="checkbox"]:not(:checked)+label:after {
+            left: 3px;
+            top: 4px;
+            width: 10px;
+            height: 5px;
+            border-radius: 1px;
+            border-left: 4px solid #DBBBA9;
+            border-bottom: 4px solid #DBBBA9;
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+
+
+        input[type="checkbox"]:not(:checked)+label:after {
+            opacity: 0;
+        }
+
+        input[type="checkbox"]:checked+label:after {
+            opacity: 1;
+        }
+    }
+
+    .nike__air {
+        margin-top: 22px;
+        border-radius: 4px;
+    }
+
+    textarea {
+        width: 465px;
+        height: 246px;
+        resize: none;
+        border: none;
+
+        &::placeholder {
+            padding: 20px 0 0 20px;
+            color: #DBBBA9;
+        }
+    }
+
+}
+
+.final-filling {
+    padding: 80px 100px 57px 100px;
+    margin: 0 auto;
+    max-width: 1180px;
+    margin-top: 60px;
+    background-color: #FFF4EE;
+   
+    
+    position: relative;
+
+    .sibling-desc {
+        color: #fff;
+    }
+
+    .get-offer {
+        max-width: 655px;
+        padding: 40px 115px 40px 40px;
+        background-color: #DBBBA9;
+        position: relative;
+
+    }
+
+    form {
+        max-width: 655px;
+        margin-top: 24px;
+        border-radius: 4px;
+
+        input[type="email"]{
+            max-width: 500px;
+            border-radius: 4px;
+        }
+        input[type="text"]{
+            max-width: 500px;
+            border-radius: 4px;
+        }
+
+    
+
+
+        input[type="submit"] {
+            padding: 23px 73px 21px 74px;
+            margin-top: 20px;
+            background-color: #F14F4F;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+        }
+
+    }
+
+    img {
+        position: absolute;
+        top: 30%;
+        right: 20%;
+
+    }
+}

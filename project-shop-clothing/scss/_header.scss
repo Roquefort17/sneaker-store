@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: grey;
+}
+
+header {
+    background-color: #484283;
+    padding: 20px 370px 100px 370px;
+    position: relative;
+
+    .small-basket {
+        display: none;
+        position: relative;
+        z-index: 999;
+        bottom: 397px;
+        left: 700px;
+        max-width: 480px;
+        background-color: #fff;
+
+        .all-goods {
+            overflow-y: scroll;
+            height: 323px;
+            background: rgba(204, 217, 242, 0.2);
+
+            .empty-message {
+                margin: 140px 0 0 90px;
+                font-size: 50px;
+                font-weight: 500;
+
+            }
+
+            &::-webkit-scrollbar {
+                width: 7px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: rgba(77, 77, 77, 0.2);
+                border-radius: 5px;
+            }
+        }
+
+        .under-goods {
+            padding: 20px 20px 20px 20px;
+            display: flex;
+
+            box-shadow: 0px -4px 10px 0px rgba(0, 13, 84, 0.1);
+            display: flex;
+
+            .total-price {
+                margin: 20px 0 0 20px;
+                margin-right: 129px;
+
+
+                .total-text {
+                    margin-bottom: 10px;
+                    color: #4D4D4D;
+                    font-weight: 400;
+                    font-size: 14px;
+
+                }
+
+                .price-total-busket {
+                    font-weight: 700;
+                    color: #4D4D4D;
+                    font-size: 20px;
+
+
+                }
+            }
+
+            .go_to_cart {
+
+                background-color: #F14F4F;
+                border: none;
+                padding: 22px 47px 22px 47px;
+                color: #fff;
+                border-radius: 4px;
+                cursor: pointer;
+
+            }
+        }
+
+        .goods {
+            display: flex;
+            max-width: 440px;
+            margin-left: 20px;
+
+            .sibling_busket {
+                margin-left: auto;
+                cursor: pointer;
+            }
+
+            &:nth-child(even) {
+                margin-top: 15px;
+                margin-bottom: 25px;
+            }
+
+            .sibling__goods {
+                margin-top: 20px;
+                margin-left: 10px;
+
+                .desc-shoes-busket {
+                    color: #4D4D4D;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+
+                .price-shoes-busket {
+                    color: #4D4D4D;
+                    font-weight: 700;
+                    line-height: 20px;
+                    font-size: 20px;
+                    margin-top: 14px;
+                }
+            }
+
+            .icon-shoes-busket {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        border-bottom: solid 1px grey;
+        text-align: center;
+
+
+
+        .logo {
+            color: #fff;
+            align-self: center;
+            margin-right: auto;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 30px;
+        }
+
+        .menu_list {
+            list-style-type: none;
+            display: flex;
+            font-size: 14px;
+            line-height: 14px;
+            font-weight: 400;
+            padding-right: 40px;
+
+            .menu_nav_search:not(:nth-child(6)) {
+                padding-right: 40px;
+            }
+        }
+
+        li {
+            list-style-type: none;
+            align-self: center;
+            margin-right: 10px;
+
+            a {
+                text-decoration: none;
+                color: #fff;
+
+            }
+        }
+
+        .complex_img {
+            margin-top: 12px;
+            position: relative;
+
+            .menu_basket {
+
+                height: 20px;
+                width: 18.42px;
+                cursor: pointer;
+
+            }
+
+            .menu_one {
+                height: 16.84px;
+                width: 16px;
+                position: absolute;
+                left: 8px;
+                top: 5px;
+                cursor: pointer;
+            }
+
+            .number {
+                position: absolute;
+                top: 1px;
+                left: 5px;
+                color: #fff;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+        }
+    }
+
+    section {
+        margin-top: 100px;
+        position: relative;
+        z-index: 999;
+
+
+        .about-dilevary {
+            color: #fff;
+            font-size: 36px;
+            font-weight: 400;
+            line-height: 50.4px;
+        }
+
+        .desc-product {
+            color: #fff;
+            font-size: 16px;
+            line-height: 22.4px;
+            font-weight: 400;
+        }
+
+        .shopping {
+            padding: 22px 47px 22px 47px;
+            border-radius: 4px;
+            background-color: #F14F4F;
+            border: none;
+            color: #fff;
+            margin-top: 40px;
+            cursor: pointer;
+        }
+    }
+
+    .back-text {
+        position: absolute;
+        bottom: 88px;
+        left: 515px;
+        z-index: 1;
+        bottom: 100px;
+        color: #FFFFFF1F;
+        font-size: 200px;
+    }
+}

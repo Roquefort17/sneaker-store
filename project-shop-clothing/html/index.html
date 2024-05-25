@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.send(" service_zk6kjb6 ", " template_wof4j5s ", {
+                to_name: "buddy",
+                from_name: "moderators",
+                message:
+                    "We are glad that you used our service ",
+            });
+        })();
+    </script>
+</head>
+
+<body>
+    <script>
+        document.getElementById('emailForm').addEventListener('submit', function (event) {
+            event.preventDefault(); 
+
+            const serviceID = 'service_zk6kjb6'; 
+            const templateID = 'template_wof4j5s'; 
+
+            const text = document.querySelector('input[name="text"]').value;
+            const email = document.querySelector('input[name="email"]').value;
+
+            const templateParams = {
+                message: text,
+                email: email
+            };
+
+            emailjs.send(serviceID, templateID, templateParams)
+                .then(function (response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Email sent successfully!');
+                }, function (error) {
+                    console.log('FAILED...', error);
+                    alert('Failed to send email.');
+                });
+        });
+    </script>
+
+    </script>
+    <div id="desktop">
+        <header>
+            <nav>
+                <div class="logo">SneakMax</div>
+                <ul class="menu_list">
+                    <li class="menu_nav_search"><a href="">Каталог</a></li>
+                    <li class="menu_nav_search"><a href="">О нас</a></li>
+                    <li class="menu_nav_search"><a href="">Подбор товара</a></li>
+                    <li class="menu_nav_search"><a href="">Наша Команда</a></li>
+                    <li class="menu_nav_search"><a href="">Доставка и оплата</a></li>
+                    <li class="menu_nav_search"><a href="">Контакты</a></li>
+                </ul>
+                <li class="menu_nav_search"><a href="">Корзина</a></li>
+                <div class="complex_img">
+                    <img src="/img/busket.svg" alt="Корзина" class="menu_busket">
+                    <div class="menu_one hidden">
+                        <img src="/img/red-bgc.svg" alt="">
+                        <div class="number">1</div>
+                    </div>
+                </div>
+
+            </nav>
+            <section>
+                <p class="about-dilevary">Кроссовки известных брендов <br>
+                    с доставкой по России и СНГ</p>
+                <p class="desc-product">Мы продаем кроссовки брендов Nike, Adidas, Puma, Reebok, <br> Converse и многие
+                    другие по низким ценам</p>
+                <button class="shopping">Перейти к покупкам</button>
+            </section>
+            <div class="back-text">SneakMax</div>
+            <!--малая корзина-->
+            <div class="small-basket">
+                <div class="all-goods">
+
+                </div>
+
+                <div class="under-goods">
+                    <div class="total-price">
+                        <div class="total-text">Итого:</div>
+                        <div class="price-total-busket">0 ₽</div>
+                    </div>
+                    <button class="go_to_cart">Перейти в корзину</button>
+                </div>
+            </div>
+        </header>
+        <main>
+
+            <div class="options_filters">
+                <div class="text_catalog">Каталог</div>
+                <div class="cross_filters">
+                    <div class="filters">
+                        <div class="selection_param">Подбор <br>
+                            по параметрам</div>
+                        <div class="price-filter">
+                            <div class="price">Цена, руб</div>
+                            <div class="display_interval">
+                                <div class="from-number">0</div>
+                                <div class="divider"></div>
+                                <div class="before-number">0</div>
+                            </div>
+                            <input type="range" min="0" max="30000" step="5" name="" id="from-range">
+                            <input type="range" min="0" max="30000" step="5" name="" id="before-range">
+                            <div class="gender_filter">
+                                <div class="floor">Пол</div>
+                                <div class="checkbox_filter_floor">
+                                    <input type="checkbox" id="man"><label for="man">мужской</label>
+                                    <input type="checkbox" id="woman"><label for="woman">женский</label>
+                                </div>
+                            </div>
+                            <div class="size_filter">
+                                <div class="text-size">Размер</div>
+                                <div class="filters_size_columns">
+                                    <button class="square_size active">35</button>
+                                    <button class="square_size">36</button>
+                                    <button class="square_size">37</button>
+                                    <button class="square_size">38</button>
+                                    <button class="square_size">39</button>
+                                    <button class="square_size">40</button>
+                                    <button class="square_size">41</button>
+                                    <button class="square_size">42</button>
+                                    <button class="square_size">43</button>
+
+                                </div>
+                            </div>
+                            <div class="complex_bth">
+                                <button class="apply">
+                                    <p>Применить</p>
+                                </button>
+                                <div class="reset">
+                                    <p>сбросить</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="products">
+
+                <div class="cards">
+                    <div class="cards__frame"><img src="/img/cross.svg" alt="">
+                        <div class="wrapper">
+                            <img src="/img/view_product.svg" alt="">
+                            <img src="/img/add_about_busket.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="cards__desc">
+                        <p>Кроссовки Nike Air Force 1 '07 QS</p>
+                    </div>
+                    <div class="cards__price">
+                        <p>11 000 р</p>
+                    </div>
+                    <img src="/img/free-icon-plus-149145.png" alt="" class="add_plus">
+
+                </div>
+
+                <div class="cards">
+                    <img src="/img/cross.svg" alt="" class="cards__frame">
+                    <div class="wrapper">
+                        <img src="/img/view_product.svg" alt="">
+                        <img src="/img/add_about_busket.svg" alt="">
+                    </div>
+                    <div class="cards__desc">
+                        <p>Кроссовки Nike Air Force 1 '07 QS</p>
+                    </div>
+                    <div class="cards__price">
+                        <p>11 000 р</p>
+                    </div>
+                    <img src="/img/free-icon-plus-149145.png" alt="" class="add_plus">
+
+                </div>
+
+                <div class="cards">
+                    <img src="/img/cross.svg" alt="" class="cards__frame">
+                    <div class="wrapper">
+                        <img src="/img/view_product.svg" alt="">
+                        <img src="/img/add_about_busket.svg" alt="">
+                    </div>
+                    <div class="cards__desc">
+                        <p>Кроссовки Nike Air Force 1 '07 QS</p>
+                    </div>
+                    <div class="cards__price">
+                        <p>11 000 р</p>
+                    </div>
+                    <img src="/img/free-icon-plus-149145.png" alt="" class="add_plus">
+
+                </div>
+
+                <div class="cards">
+                    <img src="/img/cross.svg" alt="" class="cards__frame">
+                    <div class="wrapper">
+                        <img src="/img/view_product.svg" alt="">
+                        <img src="/img/add_about_busket.svg" alt="">
+                    </div>
+                    <div class="cards__desc">
+                        <p>Кроссовки Nike Air Force 1 '07 QS</p>
+                    </div>
+                    <div class="cards__price">
+                        <p>11 000 р</p>
+                    </div>
+                    <img src="/img/free-icon-plus-149145.png" alt="" class="add_plus">
+                </div>
+
+                <div class="cards">
+                    <img src="/img/cross.svg" alt="" class="cards__frame">
+                    <div class="wrapper">
+                        <img src="/img/view_product.svg" alt="">
+                        <img src="/img/add_about_busket.svg" alt="">
+                    </div>
+                    <div class="cards__desc">
+                        <p>Кроссовки Nike Air Force 1 '07 QS</p>
+                    </div>
+                    <div class="cards__price">
+                        <p>11 000 р</p>
+                    </div>
+                    <img src="/img/free-icon-plus-149145.png" alt="" class="add_plus">
+                </div>
+
+                <div class="cards">
+                    <img src="/img/cross.svg" alt="" class="cards__frame">
+                    <div class="wrapper">
+                        <img src="/img/view_product.svg" alt="">
+                        <img src="/img/add_about_busket.svg" alt="">
+                    </div>
+                    <div class="cards__desc">
+                        <p>Кроссовки Nike Air Force 1 '07 QS</p>
+                    </div>
+                    <div class="cards__price">
+                        <p>11 000 р</p>
+                    </div>
+                    <img src="/img/free-icon-plus-149145.png" alt="" class="add_plus">
+                </div>
+
+                <div class="cards">
+                    <img src="/img/cross.svg" alt="" class="cards__frame">
+                    <div class="wrapper">
+                        <img src="/img/view_product.svg" alt="">
+                        <img src="/img/add_about_busket.svg" alt="">
+                    </div>
+                    <div class="cards__desc">
+                        <p>Кроссовки Nike Air Force 1 '07 QS</p>
+                    </div>
+                    <div class="cards__price">
+                        <p>11 000 р</p>
+                    </div>
+                    <img src="/img/free-icon-plus-149145.png" alt="" class="add_plus">
+                </div>
+
+                <div class="cards">
+                    <img src="/img/cross.svg" alt="" class="cards__frame">
+                    <div class="wrapper">
+                        <img src="/img/view_product.svg" alt="">
+                        <img src="/img/add_about_busket.svg" alt="">
+                    </div>
+                    <div class="cards__desc">
+                        <p>Кроссовки Nike Air Force 1 '07 QS</p>
+                    </div>
+                    <div class="cards__price">
+                        <p>11 000 р</p>
+                    </div>
+                    <img src="/img/free-icon-plus-149145.png" alt="" class="add_plus">
+                </div>
+
+                <div class="cards">
+                    <img src="/img/cross.svg" alt="" class="cards__frame">
+                    <div class="wrapper">
+                        <img src="/img/view_product.svg" alt="">
+                        <img src="/img/add_about_busket.svg" alt="">
+                    </div>
+
+                    <div class="cards__desc">
+                        <p>Кроссовки Nike Air Force 1 '07 QS</p>
+                    </div>
+                    <div class="cards__price">
+                        <p>11 000 р</p>
+                    </div>
+                    <img src="/img/free-icon-plus-149145.png" alt="" class="add_plus">
+                </div>
+                <button class="show_more">
+                    <p>Показать еще</p>
+                </button>
+            </div>
+        </main>
+        <div class="about">
+            <img src="/img/figure.png" alt="" class="figure">
+            <article>
+                <h2>Пара слов о нас</h2>
+                <p>Спорт держит нас в форме. Учит дисциплине. Объединяет нас. Через спорт мы можем менять жизни. В том
+                    числе с помощью воодушевляющих историй спортсменов. Чтобы помочь тебе подняться и двигаться вперед.
+                </p>
+                <div class="cite">
+                    <div class="logo"></div>
+                    <div class="logo_sibling">SneakMax</div>
+                </div>
+            </article>
+            <img src="/img/mask group.png" alt="" class="mask__group">
+        </div>
+        <div class="slider">
+            <div class="quiz">
+                <div class="desc-quiz">
+                    <div class="sibling-desc-quiz">
+                        <h2>Мы подберем идеальную пару для вас</h2>
+                        <p>Ответьте на три вопроса и мы вышлем каталог с самыми подходящими для вас моделями </p>
+                    </div>
+                    <hr>
+                    <h3>Какой тип кроссовок рассматриваете?</h3>
+                </div>
+                <div class="choice-shoes">
+
+                    <div class="this_shoes">
+                        <img src="/img/shoes.svg" alt="">
+                        <input type="checkbox" name="" id="shoes1"><label for="shoes1">кеды</label>
+                    </div>
+
+                    <div class="this_shoes">
+                        <img src="/img/shoes.svg" alt="">
+                        <input type="checkbox" name="" id="shoes2"><label for="shoes2">кеды</label>
+                    </div>
+
+                    <div class="this_shoes">
+                        <img src="/img/shoes.svg" alt="">
+                        <input type="checkbox" name="" id="shoes3"><label for="shoes3">кеды</label>
+                    </div>
+
+                    <div class="this_shoes">
+                        <img src="/img/shoes.svg" alt="">
+                        <input type="checkbox" name="" id="shoes4"><label for="shoes4">кеды</label>
+                    </div>
+
+                    <div class="this_shoes">
+                        <img src="/img/shoes.svg" alt="">
+                        <input type="checkbox" name="" id="shoes5"><label for="shoes5">кеды</label>
+                    </div>
+
+                    <div class="this_shoes">
+                        <img src="/img/shoes.svg" alt="">
+                        <input type="checkbox" name="" id="shoes6"><label for="shoes6">кеды</label>
+                    </div>
+
+                </div>
+                <hr>
+                <div class="staps">
+                    <div class="number_staps">1 из 3</div>
+                    <button class="bth-stroke">Следующий шаг</button>
+                </div>
+            </div>
+            <div class="quiz">
+                <div class="desc-quiz">
+                    <div class="sibling-desc-quiz">
+                        <h2>Мы подберем идеальную пару для вас</h2>
+                        <p>Ответьте на три вопроса и мы вышлем каталог с самыми подходящими для вас моделями </p>
+                    </div>
+                    <hr>
+                    <h3>Какой размер вам подойдет?</h3>
+                </div>
+                <div class="choice-size-checkbox">
+                    <div class="complex-checkbox">
+                        <div class="this-checkbox">
+                            <input type="checkbox" name="" id="s-36"><label for="s-36">менее 36</label>
+                        </div>
+
+                        <div class="this-checkbox">
+                            <input type="checkbox" name="" id="s-36-38"><label for="s-36-38">36-38</label>
+                        </div>
+
+                        <div class="this-checkbox">
+                            <input type="checkbox" name="" id="s-39-41"><label for="s-39-41">39-41</label>
+                        </div>
+                        <div class="this checkbox">
+                            <input type="checkbox" name="" id="s-42-44"><label for="s-42-44">42-44</label>
+                        </div>
+
+
+                        <div class="this-checkbox">
+                            <input type="checkbox" name="" id="s-45"><label for="s-45">45 и больше</label>
+                        </div>
+
+                    </div>
+                    <img src="/img/item-air-shoes.svg" alt="" class="nike__air">
+                    <hr>
+                    <div class="staps">
+                        <div class="number_staps">2 из 3</div>
+                        <button class="bth-stroke">Следующий шаг</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="quiz">
+                <div class="desc-quiz">
+                    <div class="sibling-desc-quiz">
+                        <h2>Мы подберем идеальную пару для вас</h2>
+                        <p>Ответьте на три вопроса и мы вышлем каталог с самыми подходящими для вас моделями </p>
+                    </div>
+                    <hr>
+                    <h3>Уточните какие-либо моменты</h3>
+                </div>
+                <div class="choice-size-checkbox">
+                    <div class="enter-message">
+                        <textarea name="" id="" placeholder="Введите сообщение"></textarea>
+                    </div>
+                    <hr>
+                    <div class="staps">
+                        <div class="number_staps">3 из 3</div>
+                        <button class="bth-stroke">Следующий шаг</button>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="final-filling">
+                <div class="desc-quiz">
+                    <div class="sibling-desc-quiz">
+                        <h1>Ваша подборка готова!</h1>
+                        <p>Ответьте на три вопроса и мы вышлем каталог с самыми подходящими для вас моделями </p>
+                    </div>
+                    <hr>
+                    <div class="get-offer">
+                        <div class="sibling-desc">
+                            <h2>Получить предложение</h2>
+                            <p>Получите подборку подходящих для вас моделей на почту</p>
+
+                        </div>
+                        <form id="emailForm">
+                            <input type="text" name="text" placeholder="Любой текст" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                            <input type="submit" value="Получить">
+                        </form>
+                    </div>
+                    <img src="/img/iPhone 11 Pro.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="/js/sending.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/slider.js"></script>
+</body>
+
+</html>

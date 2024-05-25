@@ -1,0 +1,42 @@
+.about {
+    background-color: #484283;
+    display: flex;
+    position: relative;
+
+    .figure {
+        position: absolute;
+    }
+
+    article {
+        max-width: 374px;
+        margin: 222px 0 0 374px;
+        color: #fff;
+        margin-right: 53px;
+
+        h2 {
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 30px;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22.4px;
+        }
+
+        .cite {
+            display: flex;
+            float: right;
+
+            .logo {
+                width: 30px;
+                height: 3px;
+                background-color: #fff;
+                align-self: center;
+                margin-right: 20px;
+
+            }
+        }
+    }
+}
